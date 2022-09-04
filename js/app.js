@@ -9,3 +9,19 @@ const loadData = async () => {
     console.log(error);
   }
 };
+
+loadData();
+
+// display catagories data function 
+const displayCatagories = (catagories) => {
+	const catagoriesField = document.getElementById('catagories');
+	catagories.forEach(catagory => {
+		const {category_id,category_name} = catagory;
+		const catagoryItem = document.createElement('div')
+		catagoriesField.classList.add('cursor-pointer')
+		catagoryItem.innerHTML = `
+			<a class="px-2  py-2 text-success fs-5 fw-semibold" onclick="loadNews('${category_id}')">${category_name}</a>
+		`;
+		catagoriesField.appendChild(catagoryItem)
+	})
+}
