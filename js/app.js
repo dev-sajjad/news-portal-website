@@ -139,7 +139,7 @@ const loadData = async () => {
   }
 };
 
-loadData();
+
 
 // display catagories data function
 const displayCatagories = (catagories) => {
@@ -154,3 +154,5 @@ const displayCatagories = (catagories) => {
     catagoriesField.appendChild(catagoryItem);
   });
 };
+
+loadData();
