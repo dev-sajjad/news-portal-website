@@ -26,3 +26,15 @@ const displayCatagories = (catagories) => {
 	})
 }
 
+// news data load function 
+const loadNews = async (id) => {
+	loadSpinner(true)
+	try {
+		const url = `https://openapi.programming-hero.com/api/news/category/${id}`
+		const res = await fetch(url)
+		const data = await res.json()
+		displayNews(data.data)
+	} catch {
+		console.log(error)
+	}
+}
