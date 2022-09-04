@@ -25,3 +25,4 @@ const displayCatagories = (catagories) => {
 		catagoriesField.appendChild(catagoryItem)
 	})
 }
+
