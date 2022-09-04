@@ -1,3 +1,12 @@
+// spinner funcition
+const loadSpinner = (isSpine) => {
+  const spinner = document.getElementById("spinner");
+  if (isSpine) {
+    spinner.classList.remove("d-none");
+  } else {
+    spinner.classList.add("d-none");
+  }
+};
 // modal data load
 const moreNewsDetails = async (newsItemId) => {
   try {
@@ -48,7 +57,7 @@ const loadNews = async (id) => {
   }
 };
 
-/// news display in ui
+// news display in ui
 const displayNews = (news) => {
   news.sort((first, second) => second.total_view - first.total_view);
   const newsField = document.getElementById("news-field");
@@ -105,11 +114,11 @@ const displayNews = (news) => {
 							</div>
 							<div class="col-md-6 d-flex">
 								<div>
-									<img class="img-fluid" src="../images/star-half.png">
-									<img class="img-fluid" src="../images/star.png">
-									<img class="img-fluid" src="../images/star.png">
-									<img class="img-fluid" src="../images/star.png">
-									<img class="img-fluid" src="../images/star.png">
+									<img class="img-fluid" src="images/star-half.png">
+									<img class="img-fluid" src="images/star.png">
+									<img class="img-fluid" src="images/star.png">
+									<img class="img-fluid" src="images/star.png">
+									<img class="img-fluid" src="images/star.png">
 								</div>	
 								<span class="ms-2 fs-5 my-auto">${rating?.number ? rating.number : 0}</span>
 							</div>
@@ -139,7 +148,7 @@ const loadData = async () => {
   }
 };
 
-
+loadData();
 
 // display catagories data function
 const displayCatagories = (catagories) => {
@@ -154,5 +163,3 @@ const displayCatagories = (catagories) => {
     catagoriesField.appendChild(catagoryItem);
   });
 };
-
-loadData();
